@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt Adventure</title>
+    <style>
+       body {
+        font-family: 'Arial', sans-serif;
+        color: #5a2a27;
+        margin: 0;
+        padding: 20px; /* Padding around the edges for mobile */
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        background-image: url('./37182.jpg'); /* A map-like background */
+        background-size: cover; /* Cover the entire viewport */
+        background-repeat: no-repeat; /* No repetition */
+        background-position: center center; /* Centered */
+        }
+
+
+         h1 {
+            font-size: 1.8em; /* Adjusted font size for mobile readability */
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 1px 1px 2px #5a2a27;
+        }
+
+        h2 {
+            font-size: 1.6em; /* For clue number */
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 1px 1px 2px #5a2a27;
+        }
+
+        p {
+            font-size: 1.2em; /* Adjusted font size for mobile readability */
+            text-align: center;
+            text-shadow: 1px 1px 2px #5a2a27;
+        }
+
+        img.cipher {
+            max-width: 90%; /* Ensures the image isn't too wide for mobile screens */
+            height: auto; /* Keeps aspect ratio */
+            margin-top: 20px; /* Space above the image */
+            border: 3px solid #5a2a27; /* Optional border around the cipher */
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Good job with the first clue!</h1>
+    <h2>Clue #2</h2> <!-- Clue Number -->
+    <p>Solve this to reveal your clue:-</p>
+    <img src="./cipher-image.jpg" alt="Cipher" class="cipher"> <!-- Cipher Image -->
+</body>
+</html>
