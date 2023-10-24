@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt Adventure</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #5a2a27;
+            margin: 0;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-image: url('./treasure-map.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        h1, h2, p, img.cipher {
+            display: none; /* Initially hide these elements */
+        }
+
+        #passwordPrompt {
+            text-align: center;
+        }
+
+        img.cipher {
+            max-width: 90%;
+            height: auto;
+            margin-top: 20px;
+            border: 3px solid #5a2a27;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="passwordPrompt">
+        <p>Enter the password to see the clue:</p>
+        <input type="password" id="passwordInput">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <h1>Welcome to the Treasure Hunt!</h1>
+    <h2>Clue #1</h2>
+    <p>Here is your clue content. Replace this text with the actual clue.</p>
+    <img src="./cipher-image.jpg" alt="Cipher" class="cipher">
+
+    <script>
+        function checkPassword() {
+            const password = "44";  // Set your password here
+            const userInput = document.getElementById("passwordInput").value;
+
+            if (userInput === password) {
+                document.getElementById("passwordPrompt").style.display = "none";
+                document.querySelector("h1").style.display = "block";
+                document.querySelector("h2").style.display = "block";
+                document.querySelector("p").style.display = "block";
+                document.querySelector(".cipher").style.display = "block";
+            } else {
+                alert("Incorrect password. Try again!");
+            }
+        }
+    </script>
+</body>
+</html>
